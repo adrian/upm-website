@@ -71,9 +71,9 @@ If an account in the CSV file exists in the database you'll be prompted for the 
 </p>
 
 <ul>
-    <li>Open a command prompt and cd to the directory where UPM is installed</li>
-    <li>Execute "java -classpath upm.jar InstallCert &lt;url&gt;"</li>
+    <li>Open a command prompt and cd to the directory where UPM is installed (on OS X this will be something like <tt>&lt;install dir&gt;/UPM.app/Contents/Resources/Java</tt>).</li>
+    <li>Execute <tt>java -classpath upm.jar InstallCert &lt;url&gt;</tt></li>
     <li>When prompted hit enter (to accept the default option)</li>
-    <li>There should now be a file called jssecacerts in the current directory. Copy this file into the ".\lib\security" directory where your Java runtime is installed.</li>
+    <li>There should now be a file called jssecacerts in the current directory. Move this file into the <tt>./lib/security/</tt> directory of Java runtime (on OS X do something like <tt>sudo mv jssecacerts /System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/lib/security</tt>).</li>
 </ul>
 
