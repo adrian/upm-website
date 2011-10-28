@@ -21,13 +21,15 @@ title: UPM Android User Guide
 
 {% include ad_banner.html %}
 
-<h2>Installation<a name="installation"></a></h2>
+<a name="installation"></a>
+<h2>Installation</h2>
 <p>
     UPM can installed from the <a href="https://market.android.com/details?id=com.u17od.upm">Android Market</a>.
 </p>
 
 
-<h2>Creating a New Database<a name="create_new_database"></a></h2>
+<a name="create_new_database"></a>
+<h2>Creating a New Database</h2>
 <p>
     The first time you start UPM (or after deleting your database) you'll be presented with the <b>New Database</b> screen.
 </p>
@@ -47,7 +49,8 @@ title: UPM Android User Guide
 <img class="centered-image" src="images/android/accounts_screen_no_accounts.png"></img>
 
 
-<h2>Adding an Account<a name="adding_an_account"></a></h2>
+<a name="adding_an_account"></a>
+<h2>Adding an Account</h2>
 <p>
     From the accounts screen click <i>Menu -> Add</i>.
 </p>
@@ -65,14 +68,16 @@ title: UPM Android User Guide
 <img class="centered-image" src="images/android/accounts_screen_one_account.png"></img>
 
 
-<h2>Opening an Account<a name="opening_an_account"></a></h2>
+<a name="opening_an_account"></a>
+<h2>Opening an Account</h2>
 <p>
     To open an account simply select the account name on the Accounts screen.
 </p>
 <img class="centered-image" src="images/android/open_account.png"></img>
 
 
-<h2>Editing an Account<a name="editing_an_account"></a></h2>
+<a name="editing_an_account"></a>
+<h2>Editing an Account</h2>
 <p>
     There are two ways of editing an account.
 </p>
@@ -101,7 +106,8 @@ title: UPM Android User Guide
 </p>
 
 
-<h2>Deleting an Account<a name="deleting_an_account"></a></h2>
+<a name="deleting_an_account"></a>
+<h2>Deleting an Account</h2>
 <ol>
     <li>Open the account from the Acccount list screen</li>
     <li>Select Menu -> Delete</li>
@@ -110,7 +116,8 @@ title: UPM Android User Guide
 <img class="centered-image" src="images/android/delete_account_confirm.png"></img>
 
 
-<h2>Database Sharing<a name="database_sharing"></a></h2>
+<a name="database_sharing"></a>
+<h2>Database Sharing</h2>
 <p>
     See <a href="database_sharing.html">Database Sharing</a> for an overview of this feature and instructions on how to setup your server.
 </p>
@@ -135,7 +142,9 @@ title: UPM Android User Guide
     <li>If the database is successfully downloaded you'll be presented with the Enter Master Password screen.<img class="centered-image" src="images/android/enter_master_password.png"></img></li>
 </ol>
 
-<h2>Backup<a name="backup"></a></h2>
+
+<a name="backup"></a>
+<h2>Backup</h2>
 UPM stores your password database in an area that's inaccessible to other applications. It's referred to as <a href="http://developer.android.com/intl/fr/guide/topics/data/data-storage.html#filesInternal">Internal Storage</a>. As a consequence, if UPM is uninstalled or your phone is reset your password database will be deleted. For this reason it's <b>extremely important</b> that you backup regularly.
 <ol>
   <li>Open your database</li>
@@ -144,7 +153,8 @@ UPM stores your password database in an area that's inaccessible to other applic
 Your database will be copied to your SD card with the name <b>upm.db</b>.
 
 
-<h2>Restore<a name="restore"></a></h2>
+<a name="restore"></a>
+<h2>Restore</h2>
 <p>
     If you've just installed UPM and haven't created a database yet you can restore a version that you backed up previously. On the New Database screen select Remote Database. This will restore the database named upm.db from your SD card.
 </p>
@@ -153,7 +163,8 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 </p>
 
 
-<h2>Preferences<a name="preferences"></a></h2>
+<a name="preferences"></a>
+<h2>Preferences</h2>
 <ul>
     <li><b>URL</b>: The URL where you're sycing your database.</li>
     <li><b>HTTP Authentication Account</b>: The account providing the username and password need to access the URL used for syncing. See <a href="#database_sharing">Database Sharing.</a></li>
@@ -162,7 +173,8 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 <img class="centered-image" src="images/android/preferences.png"></img>
 
 
-<h2>How to Add a Trusted HTTPS Certificate<a name="add_trusted_https_cert"></a></h2>
+<a name="add_trusted_https_cert"></a>
+<h2>How to Add a Trusted HTTPS Certificate</h2>
 <p>
     If you use a HTTPS URL for your remote database and the server is using a self signed certificate you may get this error when you attempt to sync, <b>javax.net.ssl.SSLException: Not trusted server certificate</b>. What you need to do is import the server's certificate into UPM so that it knows it can be trusted. Here's how.
 </p>
@@ -185,7 +197,8 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 </ul>
 
 
-<h2>Extract a copy of your password database from an Android device<a name="extract_db"></a></h2>
+<a name="extract_db"></a>
+<h2>Extract a copy of your password database from an Android device</h2>
 <p>
     The <a href="#backup">Backup</a> menu option will copy your password database to your device's SD card. You should do this on a regular basis in case your phone becomes inoperable.
 </p>
@@ -205,7 +218,8 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 </p>
 
 
-<h2>I've performed a Factory Reset of my phone. Can I get my password database back?<a name="factory_reset"></a></h2>
+<a name="factory_reset"></a>
+<h2>I've performed a Factory Reset of my phone. Can I get my password database back?</h2>
 <p>
     Not unless you have a backup (see <a href="#backup">Backup</a>). A factory reset wipes everything on your phone.
 </p>
