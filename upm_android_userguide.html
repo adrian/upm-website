@@ -17,6 +17,7 @@ title: UPM Android User Guide
     <li><a href="#add_trusted_https_cert">How to Add a Trusted HTTPS Certificate</a></li>
     <li><a href="#extract_db">Extract a copy of your password database from an Android device</a></li>
     <li><a href="#factory_reset">I've performed a Factory Reset of my phone. Can I get my password database back?</a></li>
+    <li><a href="#copy_db_to_new_device">How can I transfer my password database to a new device</a></li>
 </ul>
 
 {% include ad_banner.html %}
@@ -156,7 +157,7 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 <a name="restore"></a>
 <h2>Restore</h2>
 <p>
-    If you've just installed UPM and haven't created a database yet you can restore a version that you backed up previously. On the New Database screen select Remote Database. This will restore the database named upm.db from your SD card.
+    If you've just installed UPM and haven't created a database yet you can restore a version that you backed up previously. On the New Database screen select Restore Database. This will restore the database named upm.db from your SD card.
 </p>
 <p>
     If you've already got a database open you can restore a previously backed up version. This will replace the currently open database with the database named upm.db on your SD card. Select Menu -> More -> Restore.
@@ -222,4 +223,16 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 <h2>I've performed a Factory Reset of my phone. Can I get my password database back?</h2>
 <p>
     Not unless you have a backup (see <a href="#backup">Backup</a>). A factory reset wipes everything on your phone.
+</p>
+
+<a name="copy_db_to_new_device"></a>
+<h2>How can I transfer my password database to a new device</h2>
+<p>
+Usually it should be just a matter of <a href="#backup">backing up on your old device</a>, moving your SD card to your new device, and <a href="#restore">restoring your database</a>.
+</p>
+<p>
+Sometimes the restore step will give the error <i>"the file to restore from doesn't exist:  /mnt/sdcard/upm.db"</i>. UPM looks for the database file (upm.db) in the <a href="http://developer.android.com/reference/android/os/Environment.html#getExternalStorageDirectory()">ExternalStorageDirectory</a>.  This is usually the root directory of your SD card but some devices put it in a sub directory (sometimes called 'data').
+</p>
+<p>
+    To figure out where UPM is looking for your database file try creating a database and backing it up. Have a look on your SD card to see where the file upm.db was written. Replace this file with upm.db from your old device. You should be able to restore it now.
 </p>
