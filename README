@@ -6,6 +6,12 @@ Edit ~/.profile and add,
   PATH=$PATH:/var/lib/gems/1.8/bin/
 
 
+== RVM ==
+Selecting a Ruby implementation,
+$ rvm list
+$ rvm use <name of impl>
+
+
 == Generating the Website ==
 $ jekyll 
 
