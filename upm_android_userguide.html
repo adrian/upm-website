@@ -6,11 +6,18 @@ title: UPM Android User Guide
 <ul>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#create_new_database">Creating a New Database</a></li>
+    <li><a href="#retrieve_from_dropbox">Retrieving a Database From Dropbox</a></li>
     <li><a href="#adding_an_account">Adding an Account</a></li>
     <li><a href="#opening_an_account">Opening an Account</a></li>
     <li><a href="#editing_an_account">Editing an Account</a></li>
     <li><a href="#deleting_an_account">Deleting an Account</a></li>
-    <li><a href="#database_sharing">Database Sharing</a></li>
+    <li>
+      <a href="#database_syncing">Database Syncing</a>
+      <ul style="margin-top: 0; margin-bottom: 0; padding-top: 6.5px">
+        <li><a href="#sync_using_dropbox">Using Dropbox</a></li>
+        <li style="padding-bottom: 0"><a href="#sync_using_http">Using HTTP</a></li>
+      </ul>
+    </li>
     <li><a href="#backup">Backup</a></li>
     <li><a href="#restore">Restore</a></li>
     <li><a href="#preferences">Preferences</a></li>
@@ -38,7 +45,7 @@ title: UPM Android User Guide
 
 <img class="centered-image" src="images/android/new_database.png"></img>
 <p>
-    Click on <b>Create New Database</b>. (<b>Restore Database</b> is described in <a href="#restore">Restore</a>. <b>Open Remote Database</b> is described in <a href="#database_sharing">Database Sharing</a>).
+    Click on <b>Create New Database</b>. (See also <a href="#restore">Restore Database From Backup</a>, <a href="#sync_using_http">Retrieve from HTTP Location</a>, <a href="#retrieve_from_dropbox">Retrieve from Dropbox</a>).
 </p>
 <p>
     The next screen will ask for the master password you'd like to use to encrypt your password database. Choose this password carefully. It should be memorable but obviously not so memorable that someone could guess it. If you forget this password there's absolutely no way of opening your database. UPM uses the most seucre encryption available, <a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>.
@@ -48,6 +55,20 @@ title: UPM Android User Guide
     Having entered your master password click on the <b>Create</b>. You'll then be presented with the accounts screen which at this point will be empty.
 </p>
 <img class="centered-image" src="images/android/accounts_screen_no_accounts.png"></img>
+
+
+<a name="retrieve_from_dropbox"></a>
+<h2>Retrieving a Database From Dropbox</h2>
+<p>
+  On the "New Database" screen select "Retrieve From Dropbox". If you haven't already done so you'll be prompted to authorise UPM to access your Dropbox account. UPM will only have access to one folder in your account, /Apps/UPM/.
+</p>
+<p>
+  Having authorised UPM you'll be presented with a list of UPM database files saved in your Dropbox account. The files are read from the folder <tt>&lt;Dropbox Root&gt;/Apps/UPM/</tt>.
+</p>
+<p>
+  The file you select will be downloaded and saved locally. You can keep the local file in sync with the version in Dropbox using Menu -> Sync.
+</p>
+<img class="centered-image" src="images/android/dropbox_files.png"></img>
 
 
 <a name="adding_an_account"></a>
@@ -117,10 +138,32 @@ title: UPM Android User Guide
 <img class="centered-image" src="images/android/delete_account_confirm.png"></img>
 
 
-<a name="database_sharing"></a>
-<h2>Database Sharing</h2>
+<a name="database_syncing"></a>
+<h2>Database Syncing</h2>
+
+
+<a name="sync_using_dropbox"></a>
+<h2>Sync Using Dropbox</h2>
 <p>
-    See <a href="database_sharing.html">Database Sharing</a> for an overview of this feature and instructions on how to setup your server.
+   If you have a database on your Android device and you'd like to save it to Dropbox follow these steps,
+  <ol>
+    <li>Select Menu -> Preferences</li>
+    <li>Under <i>Sync Settings</i> select <i>Sync Method</i></li>
+    <li>Select <i>Dropbox</i>
+    <li>Hit <i>Back</i> to exit Settings and get back to the application</li>
+    <li>Select Menu -> Sync</i>
+  </ol>
+  If you've not already done so you'll be requested to authorise the UPM application. UPM will only have access to one folder in your Dropbox account, /Apps/UPM/. This folder is created and your database saved there.
+</p>
+
+<p>
+  If you already have a UPM database on Dropbox see <a href="#retrieve_from_dropbox">Retrieving a Database From Dropbox</a>.
+</p>
+
+<a name="sync_using_http"></a>
+<h2>Sync Using a HTTP Server</h2>
+<p>
+    See <a href="database_syncing.html">Database Syncing</a> for an overview of this feature and instructions on how to setup your server.
 </p>
 <p>
     At the outset, there are generally two scenarios you can find yourself in terms of syncing. The first is where you have a password database on your android device that you'd like to upload to your server and make available for syncing to other devices. The second is where there's a password database already on your server and you'd like to sync it to your device.
@@ -136,12 +179,13 @@ title: UPM Android User Guide
 <ol>
     <li>Select Menu -> Preferences</li>
     <li>The option to download a remote database is available on the same screen from where you create a new database. If you've already got a database you'll need to delete it (Menu -> More -> Delete Database).</li>
-    <li>Select Open Remote Database on the New Database screen.<br><img class="centered-image" src="images/android/new_database.png"></img></li>
+    <li>Select "Retrieve From HTTP Location" on the New Database screen.<br><img class="centered-image" src="images/android/new_database.png"></img></li>
     <li>Enter the full URL to your database, e.g. https://www.mydomain.com/upm/upm.db</li>
     <li>If the URL uses Basic Authentication enter the User Id and Password.</li>
     <li>Click Download</li>
-    <li>If the database is successfully downloaded you'll be presented with the Enter Master Password screen.<img class="centered-image" src="images/android/enter_master_password.png"></img></li>
+    <li>If the database is successfully downloaded you'll be presented with the Enter Master Password screen.</li>
 </ol>
+<img class="centered-image" src="images/android/enter_master_password.png"></img>
 
 
 <a name="backup"></a>
@@ -157,7 +201,7 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 <a name="restore"></a>
 <h2>Restore</h2>
 <p>
-    If you've just installed UPM and haven't created a database yet you can restore a version that you backed up previously. On the New Database screen select Restore Database. This will restore the database named upm.db from your SD card.
+    If you've just installed UPM and haven't created a database yet you can restore a version that you backed up previously. On the New Database screen select <b>Restore Database From Backup</b>. This will restore the database named upm.db from your SD card.
 </p>
 <p>
     If you've already got a database open you can restore a previously backed up version. This will replace the currently open database with the database named upm.db on your SD card. Select Menu -> More -> Restore.
@@ -168,7 +212,7 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 <h2>Preferences</h2>
 <ul>
     <li><b>URL</b>: The URL where you're sycing your database.</li>
-    <li><b>HTTP Authentication Account</b>: The account providing the username and password need to access the URL used for syncing. See <a href="#database_sharing">Database Sharing.</a></li>
+    <li><b>HTTP Authentication Account</b>: The account providing the username and password need to access the URL used for syncing. See <a href="#database_syncing">Database Syncing.</a></li>
     <li><b>Trusted Hostname</b>: Name of the host where you sync your database. This is only required if your use HTTPS and the certificate doesn't have your hostname in the Common Name. See <a href="#add_trusted_https_cert">How to Add a Trusted HTTPS Certificate</a>.</li>
 </ul>
 <img class="centered-image" src="images/android/preferences.png"></img>

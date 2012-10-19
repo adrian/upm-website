@@ -4,7 +4,7 @@ title: UPM Windows/Mac/Linux User Guide
 ---
 <h2>Contents</h2>
 <ul>
-    <li><a href="#database_sharing">Database Sharing</a></li>
+    <li><a href="#database_syncing">Database Syncing</a></li>
     <li><a href="#export_to_csv">Export to CSV</a></li>
     <li><a href="#import_from_csv">Import from CSV</a></li>
     <li><a href="#add_trusted_https_cert">How to Add a Trusted HTTPS Certificate</a></li>
@@ -12,10 +12,23 @@ title: UPM Windows/Mac/Linux User Guide
 
 {% include ad_banner.html %}
 
-<a name="database_sharing"></a>
-<h2>Database Sharing</h2>
+<a name="database_syncing"></a>
+<h2>Database Syncing</h2>
 <p>
-    See <a href="database_sharing.html">Database Sharing</a> for an overview of this feature and instructions on how to setup your server.
+    See <a href="database_syncing.html">Database Syncing</a> for an overview of this feature.
+</p>
+
+<h2>Using Dropbox</h2>
+<p>
+  To sync from one computer to another save your database file in your Dropbox folder. If you plan to sync to an Android device create the folder <tt><Dropbox Root>/Apps/UPM</tt> and save your database there. See <a href="upm_android_userguide.html#sync_using_dropbox">Sync Using Dropbox on Android</a> for more details.
+</p>
+</p>
+  When you make a change the database will be automatically saved and sync'd to your other machines. If you have a database open and a new version comes in over Dropbox UPM will alert you and ask if you'd like to load the new version.
+</p>
+
+<h2>Using a HTTP Server</h2>
+<p>
+    See <a href="database_syncing.html#sync_http">Sync Using HTTP</a> for instructions on how to prepare your HTTP server.
 </p>
 <p>
     There are generally two scenarios you can find yourself in terms of syncing. The first is where you have a password database on your PC that you'd like to upload to your server and make available for syncing to other devices. The second is where there's a password database already on your server and you'd like to sync it to your PC.

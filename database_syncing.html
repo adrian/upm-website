@@ -1,0 +1,42 @@
+---
+layout: default
+title: Database Syncing
+---
+<h2>Database Syncing</h2>
+<p>
+    Database syncing allows you to keep your database in sync across multiple devices. You can sync your database using either Dropbox or a private HTTP server.
+</p>
+
+<h3>Sync Using Dropbox</h3>
+<p>
+    <a href="http://www.dropbox.com">Dropbox</a> is the easiest way to sync your database across multiple devices. All you need to do is save your UPM database file to your Dropbox folder. Dropbox takes care of syncing the database to all your devices.
+</p>
+<p>
+    For the best experience on Windows/Mac/Unix ensure you're using UPM 1.9 or later. This version monitors the currently open database file and alerts you if it changes.
+</p>
+<p>
+    If you're using an Android device you'll need place your database file in a special Dropbox folder (<tt>&lt;Dropbox Root&gt;/Apps/UPM</tt>) to ensure UPM can see it. See <a href="upm_android_userguide.html#sync_using_dropbox">Using Dropbox on Android</a> for more details.
+</p>
+
+<a href="#sync_http"></a>
+<h3>Sync Using HTTP</h3>
+<p>
+    Using a HTTP/HTTPS server is a little more complicated than using Dropbox. You'll need your own webserver capable of hosting <A href="http://en.wikipedia.org/wiki/PHP">PHP</a> scripts. If you don't already have one you'll need to purchase a <a href="http://en.wikipedia.org/wiki/Web_hosting_service">web hosting service</a>. A quick google for "<a href="http://www.google.com/search?q=web+hosting">web hosting</a>" should throw up quite a few options.
+</p>
+<p>
+    The webserver should be accessible from each machine and device you want to share the database between.
+</p>
+
+<h4>Server Side Steps</h4>
+<p>
+    At present UPM supports HTTP and HTTPS. The URL can be password protected by basic authentication. 
+</p>
+<p>
+    Two PHP files are required on the webserver, <b>deletefile.php</b> and <b>upload.php</b>. Both of these files come packaged with the desktop version of UPM in the <b>.\server\http</b> directory. Alternatively they can be downloaded directly from <a href="https://github.com/adrian/upm-swing/tree/master/server/http">here</a>.
+</p>
+
+<h4>Client Side Steps</h4>
+<ul>
+    <li><a href="upm_android_userguide.html#sync_using_http">Android version of UPM</a></li>
+    <li><a href="upm_swing_userguide.html#http_database_syncing">Desktop version of UPM</a></li>
+</ul>
