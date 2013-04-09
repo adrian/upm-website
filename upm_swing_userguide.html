@@ -4,6 +4,7 @@ title: UPM Windows/Mac/Linux User Guide
 ---
 <h2>Contents</h2>
 <ul>
+    <li><a href="#config_file">Where is UPM's Config File</a></li>
     <li><a href="#database_syncing">Database Syncing</a></li>
     <li><a href="#export_to_csv">Export to CSV</a></li>
     <li><a href="#import_from_csv">Import from CSV</a></li>
@@ -11,6 +12,23 @@ title: UPM Windows/Mac/Linux User Guide
 </ul>
 
 {% include ad_banner.html %}
+
+<a name="config_file"></a>
+<h2>Where is UPM's Config File</h2>
+<p>
+    UPM's configuration file is named <i>upm.properties</i>. It's location it dependant on the version of UPM you're using.
+</p>
+<p>
+    In UPM 1.9 and earlier it's located in your home directory.
+</p>
+<p>
+    In UPM 1.10 and later it's location is dependant on your operating system.
+    <ul>
+      <li>On Windows it remains in the same location as before, your home directory.</li>
+      <li>On OS X it's located in <i>&lt;HOME DIR&gt;/Library/Preferenecs/</i>.</li>
+      <li>On Linux it's located in $XDG_CONFIG_HOME/.config. If you've not explicity configured XDG_CONFIG_HOME them it defaults to your home directory so the full path is <i>&lt;HOME DIR&gt;/.config/</i>.</li>
+    </ul>
+</p>
 
 <a name="database_syncing"></a>
 <h2>Database Syncing</h2>
