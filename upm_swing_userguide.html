@@ -96,6 +96,9 @@ If an account in the CSV file exists in the database you'll be prompted for the 
 <a name="add_trusted_https_cert"></a>
 <h2>How to Add a Trusted HTTPS Certificate</h2>
 <p>
+    <b>NOTE:</b>Since 1.12 you can choose to trust all self signed certificates rather than updating your keystore. While this is a much easier option it's not enabled by default as some may not like the security implications. To enable this setting use the "Accept Self-Signed Certificates" checkbox in the options dialog.
+</p>
+<p>
     If you use a HTTPS URL for your remote database and the server is using a self signed certificate you may get this error when you try and sync,
 </p>
 <p>
