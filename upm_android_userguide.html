@@ -43,18 +43,18 @@ title: UPM Android User Guide
 </p>
 
 
-<img class="centered-image" src="images/android/new_database.png"></img>
+<img class="centered-image" src="images/android/new_database.png" width="320" height="480"></img>
 <p>
     Click on <b>Create New Database</b>. (See also <a href="#restore">Restore Database From Backup</a>, <a href="#sync_using_http">Retrieve from HTTP Location</a>, <a href="#retrieve_from_dropbox">Retrieve from Dropbox</a>).
 </p>
 <p>
     The next screen will ask for the master password you'd like to use to encrypt your password database. Choose this password carefully. It should be memorable but obviously not so memorable that someone could guess it. If you forget this password there's absolutely no way of opening your database. UPM uses the most seucre encryption available, <a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>.
 </p>
-<img class="centered-image" src="images/android/new_database_password.png"></img>
+<img class="centered-image" src="images/android/new_database_password.png" width="320" height="480"></img>
 <p>
     Having entered your master password click on the <b>Create</b>. You'll then be presented with the accounts screen which at this point will be empty.
 </p>
-<img class="centered-image" src="images/android/accounts_screen_no_accounts.png"></img>
+<img class="centered-image" src="images/android/accounts_screen_no_accounts.png" width="320" height="480"></img>
 
 
 <a name="retrieve_from_dropbox"></a>
@@ -68,7 +68,7 @@ title: UPM Android User Guide
 <p>
   The file you select will be downloaded and saved locally. You can keep the local file in sync with the version in Dropbox using Menu -> Sync.
 </p>
-<img class="centered-image" src="images/android/dropbox_files.png"></img>
+<img class="centered-image" src="images/android/dropbox_files.png" width="320" height="480"></img>
 
 
 <a name="adding_an_account"></a>
@@ -76,7 +76,7 @@ title: UPM Android User Guide
 <p>
     From the accounts screen click <i>Menu -> Add</i>.
 </p>
-<img class="centered-image" src="images/android/add_account.png"></img>
+<img class="centered-image" src="images/android/add_account.png" width="320" height="480"></img>
 <ul>
     <li><b>Account Name</b>: The name of the account as it will appear in the accounts screen</li>
     <li><b>User Id</b>: The user id associated with this new account</li>
@@ -87,7 +87,7 @@ title: UPM Android User Guide
 <p>
     Click <b>Save</b> after entering all the account details.
 </p>
-<img class="centered-image" src="images/android/accounts_screen_one_account.png"></img>
+<img class="centered-image" src="images/android/accounts_screen_one_account.png" width="320" height="480"></img>
 
 
 <a name="opening_an_account"></a>
@@ -95,7 +95,7 @@ title: UPM Android User Guide
 <p>
     To open an account simply select the account name on the Accounts screen.
 </p>
-<img class="centered-image" src="images/android/open_account.png"></img>
+<img class="centered-image" src="images/android/open_account.png" width="320" height="480"></img>
 
 
 <a name="editing_an_account"></a>
@@ -109,19 +109,19 @@ title: UPM Android User Guide
     <li>Open the account by selecting it on the accounts screen.</li>
     <li>On the Account Details screen select Menu -> Edit</li>
 </ol>
-<img class="centered-image" src="images/android/edit_account_from_menu.png"></img>
+<img class="centered-image" src="images/android/edit_account_from_menu.png" width="320" height="480"></img>
 
 <h3>Option 2</h3>
 <ol>
     <li>Long click the account on the accounts screen.</li>
     <li>Select Edit Account.</li>
 </ol>
-<img class="centered-image" src="images/android/long_click_account_dialog.png"></img>
+<img class="centered-image" src="images/android/long_click_account_dialog.png" width="320" height="480"></img>
 
 <p>
     Regardless of how you open it the Edit screen looks like this,
 </p>
-<img class="centered-image" src="images/android/edit_account.png"></img>
+<img class="centered-image" src="images/android/edit_account.png" width="320" height="480"></img>
 
 <p>
     When you're finished editing click <b>Save</b>.
@@ -135,7 +135,7 @@ title: UPM Android User Guide
     <li>Select Menu -> Delete</li>
     <li>Select <b>Yes</b> to confirm deletion</li>
 </ol>
-<img class="centered-image" src="images/android/delete_account_confirm.png"></img>
+<img class="centered-image" src="images/android/delete_account_confirm.png" width="320" height="480"></img>
 
 
 <a name="database_syncing"></a>
@@ -179,13 +179,13 @@ title: UPM Android User Guide
 <ol>
     <li>Select Menu -> Preferences</li>
     <li>The option to download a remote database is available on the same screen from where you create a new database. If you've already got a database you'll need to delete it (Menu -> More -> Delete Database).</li>
-    <li>Select "Retrieve From HTTP Location" on the New Database screen.<br><img class="centered-image" src="images/android/new_database.png"></img></li>
+    <li>Select "Retrieve From HTTP Location" on the New Database screen.<br><img class="centered-image" src="images/android/new_database.png" width="320" height="480"></img></li>
     <li>Enter the full URL to your database, e.g. https://www.mydomain.com/upm/upm.db</li>
     <li>If the URL uses Basic Authentication enter the User Id and Password.</li>
     <li>Click Download</li>
     <li>If the database is successfully downloaded you'll be presented with the Enter Master Password screen.</li>
 </ol>
-<img class="centered-image" src="images/android/enter_master_password.png"></img>
+<img class="centered-image" src="images/android/enter_master_password.png" width="320" height="480"></img>
 
 
 <a name="backup"></a>
@@ -215,7 +215,7 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
     <li><b>HTTP Authentication Account</b>: The account providing the username and password need to access the URL used for syncing. See <a href="#database_syncing">Database Syncing.</a></li>
     <li><b>Trusted Hostname</b>: Name of the host where you sync your database. This is only required if your use HTTPS and the certificate doesn't have your hostname in the Common Name. See <a href="#add_trusted_https_cert">How to Add a Trusted HTTPS Certificate</a>.</li>
 </ul>
-<img class="centered-image" src="images/android/preferences.png"></img>
+<img class="centered-image" src="images/android/preferences.png" width="320" height="480"></img>
 
 
 <a name="add_trusted_https_cert"></a>
