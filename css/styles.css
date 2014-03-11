@@ -28,6 +28,9 @@ hr {
     width:100%;
 }
 
+h2 {
+    text-decoration:underline
+}
 .icon {
     vertical-align: middle;
     border-radius: 15px;

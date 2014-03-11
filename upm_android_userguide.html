@@ -29,36 +29,31 @@ title: UPM Android User Guide
 
 {% include ad_banner.html %}
 
-<a name="installation"></a>
-<h2>Installation</h2>
+<h2 id="installation">Installation</h2>
 <p>
     UPM can installed from the <a href="https://market.android.com/details?id=com.u17od.upm">Android Market</a>.
 </p>
 
 
-<a name="create_new_database"></a>
-<h2>Creating a New Database</h2>
+<h2 id="create_new_database">Creating a New Database</h2>
 <p>
     The first time you start UPM (or after deleting your database) you'll be presented with the <b>New Database</b> screen.
 </p>
-
-
-<img class="centered-image" src="images/android/new_database.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/new_database.png" width="320" height="480">
 <p>
     Click on <b>Create New Database</b>. (See also <a href="#restore">Restore Database From Backup</a>, <a href="#sync_using_http">Retrieve from HTTP Location</a>, <a href="#retrieve_from_dropbox">Retrieve from Dropbox</a>).
 </p>
 <p>
     The next screen will ask for the master password you'd like to use to encrypt your password database. Choose this password carefully. It should be memorable but obviously not so memorable that someone could guess it. If you forget this password there's absolutely no way of opening your database. UPM uses the most seucre encryption available, <a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a>.
 </p>
-<img class="centered-image" src="images/android/new_database_password.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/new_database_password.png" width="320" height="480">
 <p>
     Having entered your master password click on the <b>Create</b>. You'll then be presented with the accounts screen which at this point will be empty.
 </p>
-<img class="centered-image" src="images/android/accounts_screen_no_accounts.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/accounts_screen_no_accounts.png" width="320" height="480">
 
 
-<a name="retrieve_from_dropbox"></a>
-<h2>Retrieving a Database From Dropbox</h2>
+<h2 id="retrieve_from_dropbox">Retrieving a Database From Dropbox</h2>
 <p>
   On the "New Database" screen select "Retrieve From Dropbox". If you haven't already done so you'll be prompted to authorise UPM to access your Dropbox account. UPM will only have access to one folder in your account, /Apps/UPM/.
 </p>
@@ -68,15 +63,14 @@ title: UPM Android User Guide
 <p>
   The file you select will be downloaded and saved locally. You can keep the local file in sync with the version in Dropbox using Menu -> Sync.
 </p>
-<img class="centered-image" src="images/android/dropbox_files.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/dropbox_files.png" width="320" height="480">
 
 
-<a name="adding_an_account"></a>
-<h2>Adding an Account</h2>
+<h2 id="adding_an_account">Adding an Account</h2>
 <p>
     From the accounts screen click <i>Menu -> Add</i>.
 </p>
-<img class="centered-image" src="images/android/add_account.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/add_account.png" width="320" height="480">
 <ul>
     <li><b>Account Name</b>: The name of the account as it will appear in the accounts screen</li>
     <li><b>User Id</b>: The user id associated with this new account</li>
@@ -87,19 +81,17 @@ title: UPM Android User Guide
 <p>
     Click <b>Save</b> after entering all the account details.
 </p>
-<img class="centered-image" src="images/android/accounts_screen_one_account.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/accounts_screen_one_account.png" width="320" height="480">
 
 
-<a name="opening_an_account"></a>
-<h2>Opening an Account</h2>
+<h2 id="opening_an_account">Opening an Account</h2>
 <p>
     To open an account simply select the account name on the Accounts screen.
 </p>
-<img class="centered-image" src="images/android/open_account.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/open_account.png" width="320" height="480">
 
 
-<a name="editing_an_account"></a>
-<h2>Editing an Account</h2>
+<h2 id="editing_an_account">Editing an Account</h2>
 <p>
     There are two ways of editing an account.
 </p>
@@ -109,41 +101,38 @@ title: UPM Android User Guide
     <li>Open the account by selecting it on the accounts screen.</li>
     <li>On the Account Details screen select Menu -> Edit</li>
 </ol>
-<img class="centered-image" src="images/android/edit_account_from_menu.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/edit_account_from_menu.png" width="320" height="480">
 
 <h3>Option 2</h3>
 <ol>
     <li>Long click the account on the accounts screen.</li>
     <li>Select Edit Account.</li>
 </ol>
-<img class="centered-image" src="images/android/long_click_account_dialog.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/long_click_account_dialog.png" width="320" height="480">
 
 <p>
     Regardless of how you open it the Edit screen looks like this,
 </p>
-<img class="centered-image" src="images/android/edit_account.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/edit_account.png" width="320" height="480">
 
 <p>
     When you're finished editing click <b>Save</b>.
 </p>
 
 
-<a name="deleting_an_account"></a>
-<h2>Deleting an Account</h2>
+<h2 id="deleting_an_account">Deleting an Account</h2>
 <ol>
     <li>Open the account from the Acccount list screen</li>
     <li>Select Menu -> Delete</li>
     <li>Select <b>Yes</b> to confirm deletion</li>
 </ol>
-<img class="centered-image" src="images/android/delete_account_confirm.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/delete_account_confirm.png" width="320" height="480">
 
 
-<a name="database_syncing"></a>
-<h2>Database Syncing</h2>
+<h2 id="database_syncing">Database Syncing</h2>
 
 
-<a name="sync_using_dropbox"></a>
-<h2>Sync Using Dropbox</h2>
+<h2 id="sync_using_dropbox">Sync Using Dropbox</h2>
 <p>
    If you have a database on your Android device and you'd like to save it to Dropbox follow these steps,
   <ol>
@@ -160,8 +149,7 @@ title: UPM Android User Guide
   If you already have a UPM database on Dropbox see <a href="#retrieve_from_dropbox">Retrieving a Database From Dropbox</a>.
 </p>
 
-<a name="sync_using_http"></a>
-<h2>Sync Using a HTTP Server</h2>
+<h2 id="sync_using_http">Sync Using a HTTP Server</h2>
 <p>
     See <a href="database_syncing.html">Database Syncing</a> for an overview of this feature and instructions on how to setup your server.
 </p>
@@ -179,17 +167,16 @@ title: UPM Android User Guide
 <ol>
     <li>Select Menu -> Preferences</li>
     <li>The option to download a remote database is available on the same screen from where you create a new database. If you've already got a database you'll need to delete it (Menu -> More -> Delete Database).</li>
-    <li>Select "Retrieve From HTTP Location" on the New Database screen.<br><img class="centered-image" src="images/android/new_database.png" width="320" height="480"></img></li>
+    <li>Select "Retrieve From HTTP Location" on the New Database screen.<br><img class="centered-image" src="images/android/new_database.png" width="320" height="480"></li>
     <li>Enter the full URL to your database, e.g. https://www.mydomain.com/upm/upm.db</li>
     <li>If the URL uses Basic Authentication enter the User Id and Password.</li>
     <li>Click Download</li>
     <li>If the database is successfully downloaded you'll be presented with the Enter Master Password screen.</li>
 </ol>
-<img class="centered-image" src="images/android/enter_master_password.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/enter_master_password.png" width="320" height="480">
 
 
-<a name="backup"></a>
-<h2>Backup</h2>
+<h2 id="backup">Backup</h2>
 UPM stores your password database in an area that's inaccessible to other applications. It's referred to as <a href="http://developer.android.com/intl/fr/guide/topics/data/data-storage.html#filesInternal">Internal Storage</a>. As a consequence, if UPM is uninstalled or your phone is reset your password database will be deleted. For this reason it's <b>extremely important</b> that you backup regularly.
 <ol>
   <li>Open your database</li>
@@ -198,8 +185,7 @@ UPM stores your password database in an area that's inaccessible to other applic
 Your database will be copied to your SD card with the name <b>upm.db</b>.
 
 
-<a name="restore"></a>
-<h2>Restore</h2>
+<h2 id="restore">Restore</h2>
 <p>
     If you've just installed UPM and haven't created a database yet you can restore a version that you backed up previously. On the New Database screen select <b>Restore Database From Backup</b>. This will restore the database named upm.db from your SD card.
 </p>
@@ -208,18 +194,16 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 </p>
 
 
-<a name="preferences"></a>
-<h2>Preferences</h2>
+<h2 id="preferences">Preferences</h2>
 <ul>
     <li><b>URL</b>: The URL where you're sycing your database.</li>
     <li><b>HTTP Authentication Account</b>: The account providing the username and password need to access the URL used for syncing. See <a href="#database_syncing">Database Syncing.</a></li>
     <li><b>Trusted Hostname</b>: Name of the host where you sync your database. This is only required if your use HTTPS and the certificate doesn't have your hostname in the Common Name. See <a href="#add_trusted_https_cert">How to Add a Trusted HTTPS Certificate</a>.</li>
 </ul>
-<img class="centered-image" src="images/android/preferences.png" width="320" height="480"></img>
+<img class="centered-image" src="images/android/preferences.png" width="320" height="480">
 
 
-<a name="add_trusted_https_cert"></a>
-<h2>How to Add a Trusted HTTPS Certificate</h2>
+<h2 id="add_trusted_https_cert">How to Add a Trusted HTTPS Certificate</h2>
 <p>
     If you use a HTTPS URL for your remote database and the server is using a self signed certificate you may get this error when you attempt to sync, <b>javax.net.ssl.SSLException: Not trusted server certificate</b>. What you need to do is import the server's certificate into UPM so that it knows it can be trusted. Here's how.
 </p>
@@ -242,8 +226,7 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 </ul>
 
 
-<a name="extract_db"></a>
-<h2>Extract a copy of your password database from an Android device</h2>
+<h2 id="extract_db">Extract a copy of your password database from an Android device</h2>
 <p>
     The <a href="#backup">Backup</a> menu option will copy your password database to your device's SD card. You should do this on a regular basis in case your phone becomes inoperable.
 </p>
@@ -263,14 +246,12 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 </p>
 
 
-<a name="factory_reset"></a>
-<h2>I've performed a Factory Reset of my phone. Can I get my password database back?</h2>
+<h2 id="factory_reset">I've performed a Factory Reset of my phone. Can I get my password database back?</h2>
 <p>
     Not unless you have a backup (see <a href="#backup">Backup</a>). A factory reset wipes everything on your phone.
 </p>
 
-<a name="copy_db_to_new_device"></a>
-<h2>How can I transfer my password database to a new device</h2>
+<h2 id="copy_db_to_new_device">How can I transfer my password database to a new device</h2>
 <p>
 Usually it should be just a matter of <a href="#backup">backing up on your old device</a>, moving your SD card to your new device, and <a href="#restore">restoring your database</a>.
 </p>

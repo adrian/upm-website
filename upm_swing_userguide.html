@@ -5,7 +5,13 @@ title: UPM Windows/Mac/Linux User Guide
 <h2>Contents</h2>
 <ul>
     <li><a href="#config_file">Where is UPM's Config File</a></li>
-    <li><a href="#database_syncing">Database Syncing</a></li>
+    <li>
+      <a href="#database_syncing">Database Syncing</a>
+      <ul style="margin-top: 0; margin-bottom: 0; padding-top: 6.5px">
+        <li><a href="#sync_using_dropbox">Using Dropbox</a></li>
+        <li style="padding-bottom: 0"><a href="#sync_using_http">Using HTTP</a></li>
+      </ul>
+    </li>
     <li><a href="#export_to_csv">Export to CSV</a></li>
     <li><a href="#import_from_csv">Import from CSV</a></li>
     <li><a href="#add_trusted_https_cert">How to Add a Trusted HTTPS Certificate</a></li>
@@ -13,8 +19,7 @@ title: UPM Windows/Mac/Linux User Guide
 
 {% include ad_banner.html %}
 
-<a name="config_file"></a>
-<h2>Where is UPM's Config File</h2>
+<h2 id="config_file">Where is UPM's Config File</h2>
 <p>
     UPM's configuration file is named <i>upm.properties</i>. It's location it dependant on the version of UPM you're using.
 </p>
@@ -30,13 +35,12 @@ title: UPM Windows/Mac/Linux User Guide
     </ul>
 </p>
 
-<a name="database_syncing"></a>
-<h2>Database Syncing</h2>
+<h2 id="database_syncing">Database Syncing</h2>
 <p>
     See <a href="database_syncing.html">Database Syncing</a> for an overview of this feature.
 </p>
 
-<h2>Using Dropbox</h2>
+<h2 id="sync_using_dropbox">Using Dropbox</h2>
 <p>
   To sync from one computer to another save your database file in your Dropbox folder. If you plan to sync to an Android device create the folder <tt><Dropbox Root>/Apps/UPM</tt> and save your database there. See <a href="upm_android_userguide.html#sync_using_dropbox">Sync Using Dropbox on Android</a> for more details.
 </p>
@@ -44,7 +48,7 @@ title: UPM Windows/Mac/Linux User Guide
   When you make a change the database will be automatically saved and sync'd to your other machines. If you have a database open and a new version comes in over Dropbox UPM will alert you and ask if you'd like to load the new version.
 </p>
 
-<h2>Using a HTTP Server</h2>
+<h2 id="sync_using_http">Using a HTTP Server</h2>
 <p>
     See <a href="database_syncing.html#sync_http">Sync Using HTTP</a> for instructions on how to prepare your HTTP server.
 </p>
@@ -66,11 +70,10 @@ title: UPM Windows/Mac/Linux User Guide
 </ol>
 <p>
     When the text "Revision x - Unsynchronised" appears in red in the status bar this means that your local and remote databases may by out of sync. To synchronise them press the <i>Synchronise</i> button or the select the menu item <i>Database -> Sync with Remote Database</i>. When the databases are in sync the status bar will read "Revision x - Synchronised".
-</>
+</p>
 
 
-<a name="export_to_csv"></a>
-<h2>Export to CSV</h2>
+<h2 id="export_to_csv">Export to CSV</h2>
 WARNING: Be extremely careful with your exported CSV file. It contains the entire contents of encrypted database in plain text.
 <ul>
     <li>Select <i>Database -> Export</i></li>
@@ -78,8 +81,7 @@ WARNING: Be extremely careful with your exported CSV file. It contains the entir
 </ul>
 
 
-<a name="import_from_csv"></a>
-<h2>Import from CSV</h2>
+<h2 id="import_from_csv">Import from CSV</h2>
 <p>
 The UPM import CSV should be structured as follows,
 <pre>account name,user id,password,url,notes</pre>
@@ -93,8 +95,7 @@ Example: <pre>flickr,testuser,testpassword,http://www.flickr.com,some test notes
 If an account in the CSV file exists in the database you'll be prompted for the action to take.
 
 
-<a name="add_trusted_https_cert"></a>
-<h2>How to Add a Trusted HTTPS Certificate</h2>
+<h2 id="add_trusted_https_cert">How to Add a Trusted HTTPS Certificate</h2>
 <p>
     <b>NOTE:</b>Since 1.12 you can choose to trust all self signed certificates rather than updating your keystore. While this is a much easier option it's not enabled by default as some may not like the security implications. To enable this setting use the "Accept Self-Signed Certificates" checkbox in the options dialog.
 </p>
