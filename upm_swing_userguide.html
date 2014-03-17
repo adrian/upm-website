@@ -15,6 +15,7 @@ title: UPM Windows/Mac/Linux User Guide
     <li><a href="#export_to_csv">Export to CSV</a></li>
     <li><a href="#import_from_csv">Import from CSV</a></li>
     <li><a href="#add_trusted_https_cert">How to Add a Trusted HTTPS Certificate</a></li>
+    <li><a href="#osx_problem_running">Problem Running UPM on OS X</a></li>
 </ul>
 
 {% include ad_banner.html %}
@@ -124,3 +125,15 @@ If an account in the CSV file exists in the database you'll be prompted for the 
     </li>
 </ul>
 
+<h2 id="osx_problem_running">Problem Running UPM on OS X</h2>
+<p>
+    On downloading and running UPM on OS X you may get this error <b>"UPM is damaged and can't be opened. You should move it to trash"</b>. There isn't a problem with UPM. It's just OS X's security settings. To resolve the problem,
+    <ol>
+      <li>Open System Preferences</li>
+      <li>Open Security & Privacy</li>
+      <li>If the lock in the bottom left of this window is closed click it to unlock the settings</li>
+      <li>Under "Allow applications downloaded from" select "Anywhere"</li>
+      <li>Try opening the version of UPM that was failing previously. If all goes well it should work now.</li>        
+    </ol>
+    You can reset "Allow applications downloaded from" to what it was previously. OS X will remember that it's safe to open UPM.
+</p>
