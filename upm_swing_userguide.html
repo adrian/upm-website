@@ -127,7 +127,13 @@ If an account in the CSV file exists in the database you'll be prompted for the 
 
 <h2 id="osx_problem_running">Problem Running UPM on OS X</h2>
 <p>
-    On downloading and running UPM on OS X you may get this error <b>"UPM is damaged and can't be opened. You should move it to trash"</b>. There isn't a problem with UPM. It's just OS X's security settings. To resolve the problem,
+    On downloading and running UPM on OS X you may get this error <b>"UPM is damaged and can't be opened. You should move it to trash"</b>. There isn't a problem with UPM. It's just OS X's security settings.
+</p>
+<p>
+    There are two ways to resolve this problem.
+</p>
+<p>
+    Option 1: Via System Preferences.
     <ol>
       <li>Open System Preferences</li>
       <li>Open Security & Privacy</li>
@@ -137,3 +143,14 @@ If an account in the CSV file exists in the database you'll be prompted for the 
     </ol>
     You can reset "Allow applications downloaded from" to what it was previously. OS X will remember that it's safe to open UPM.
 </p>
+<p>
+    Option 2: By updating the application's extended attributes directly.
+    <ul>
+      <li>Open a command window and run,
+        <div>
+          <code>sudo xattr -d -r com.apple.quarantine /Applications/UPM.app</code>
+        </div>
+      </li>
+    </ul>
+</p>
+
