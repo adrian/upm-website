@@ -1,22 +1,18 @@
 == Installing Jekyll ==
-$ sudo apt-get install rubygems
-$ sudo gem install jekyll
+# apt-get install jekyll
 
-Edit ~/.profile and add,
-  PATH=$PATH:/var/lib/gems/1.8/bin/
+or
 
-
-== RVM ==
-Selecting a Ruby implementation,
-$ rvm list
-$ rvm use <name of impl>
+# apt-get install rubygems
+# apt-get install ruby-dev
+# gem install jekyll
 
 
 == Generating the Website ==
-$ jekyll 
+$ jekyll build
 
 
 == Uploading website to Sourceforge ==
-$ cd website
+$ cd upm-website
 $ rsync -avzP --delete -e ssh _site/ adrianshome,upm@web.sourceforge.net:/home/project-web/upm/htdocs/
 
