@@ -34,6 +34,34 @@ title: Database Syncing
 <p>
     Two PHP files are required on the webserver, <b>deletefile.php</b> and <b>upload.php</b>. Both of these files come packaged with the desktop version of UPM in the <b>.\server\http</b> directory. Alternatively they can be downloaded directly from <a href="https://github.com/adrian/upm-swing/tree/master/server/http">here</a>.
 </p>
+<p>
+    The directory containing your password database along with the deletefile.php and upload.php scripts should be secured using,
+    <ul>
+        <li>HTTPS</li>
+        <li>Basic Authentication</li>
+    </ul>
+
+    Sample Apache config,
+    <pre>
+    &lt;Directory "/var/www/upmdir"&gt;
+      AuthType Basic
+      AuthName "Restricted Content"
+      AuthUserFile /etc/httpd/.htpasswd
+      Require valid-user
+    &lt;/Directory&gt;
+    </pre>
+
+    To create the password file use,
+    <pre>htpasswd -c /etc/httpd/.htpasswd &lt;user name&gt;</pre>
+    (your hosting provider may provide a GUI for doing this)
+</p>
+<p>
+
+    In UPM create an account with the same username and password as created with htpasswd.
+</p>
+<p>
+    In your UPM "Database Properties" select the account you just created for "Authtentication Credentials".
+</p>
 
 <h4>Client Side Steps</h4>
 <ul>
