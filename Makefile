@@ -8,3 +8,6 @@ clean:
 
 upload:
 	rsync -avzP --delete -e ssh _site/ adrianshome,upm@web.sourceforge.net:/home/project-web/upm/htdocs/
+
+web:
+	pandoc --from=markdown --to=html README.md -o README.html
