@@ -250,12 +250,14 @@ Your database will be copied to your SD card with the name <b>upm.db</b>.
 </p>
 
 <h2 id="copy_db_to_new_device">How can I transfer my password database to a new device</h2>
-<p>
-Usually it should be just a matter of <a href="#backup">backing up on your old device</a>, moving your SD card to your new device, and <a href="#restore">restoring your database</a>.
-</p>
-<p>
-Sometimes the restore step will give the error <i>"the file to restore from doesn't exist:  /mnt/sdcard/upm.db"</i>. UPM looks for the database file (upm.db) in the <a href="http://developer.android.com/reference/android/os/Environment.html#getExternalStorageDirectory()">ExternalStorageDirectory</a>.  This is usually the root directory of your SD card but some devices put it in a sub directory (sometimes called 'data').
-</p>
-<p>
-    To figure out where UPM is looking for your database file try creating a database and backing it up. Have a look on your SD card to see where the file upm.db was written. Replace this file with upm.db from your old device. You should be able to restore it now.
-</p>
+If you have Android Backup & Restore enabled your password database will be automatically copied to your new device via Google's servers. For more information see <a href="https://support.google.com/android/answer/2819582?hl=en">Back up or restore data on your Android device</a>.
+
+If you don't use Android Backup & Restore you can copy your password database manually.
+<ol>
+  <li>Open your database on the device you want to copy from.</li>
+  <li>Select "Backup" from the menu. This will backup your password database to <i>/storage/emulated/0/Android/data/com.u17od.upm/files/upm.db</i>.</li>
+  <li>Copy this file to your new device using something like Google Drive. If you can't see the upm.db file using the Android Files application try connecting your device to a PC and browsing the filesystem using Windows File Explorer or equivalent.</li>
+  <li>Install UPM on your new device (if you haven't done so already).</li>
+  <li>Copy the upm.db file from your source device into the directory <i>/storage/emulated/0/Android/data/com.u17od.upm/files/</i> on your new device.</li>
+  <li>Start UPM and select "Restore Database from Backup".</li>
+</ol>
